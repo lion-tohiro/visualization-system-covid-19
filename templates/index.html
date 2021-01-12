@@ -11,7 +11,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="static/assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
-		<script src="static/assets/js/echarts.min.js"></script>
+		<script src="static/assets/js/echarts.js"></script>
+		<script src="static/assets/js/echarts-gl.min.js"></script>
+		<script src="static/assets/js/zrender.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -24,7 +26,7 @@
 						Massively</h1>
 						<p>A free, fully responsive HTML5 + CSS3 site template designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a><br />
 						and released for free under the <a href="https://html5up.net/license">Creative Commons license</a>.</p> -->
-						<div id="graph" style="width: 1050px;height:700px;"></div>
+						<div id="graph" style="width: 1050px;height:800px;"></div>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
@@ -229,29 +231,72 @@
 		<script type="text/javascript">
 			// 基于准备好的dom，初始化echarts实例
 			var myChart = echarts.init(document.getElementById('graph'));
-	
-			// 指定图表的配置项和数据
-			var option = {
-				title: {
-					text: 'ECharts 入门示例'
-				},
-				tooltip: {},
-				legend: {
-					data:['销量']
-				},
-				xAxis: {
-					data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
-				},
-				yAxis: {},
-				series: [{
-					name: '销量',
-					type: 'bar',
-					data: [5, 20, 36, 10, 10, 20]
-				}]
-			};
-	
-			// 使用刚指定的配置项和数据显示图表。
-			myChart.setOption(option);
+
+			var ROOT_PATH = 'https://echarts.apache.org/next/examples'
+
+			var option;
+
+			$.getJSON("static/assets/json/population.json", function (data) {
+
+    			data = data.filter(function (dataItem) {
+       				return dataItem[2] > 0;
+    			}).map(function (dataItem) {
+        			return [dataItem[0], dataItem[1], Math.sqrt(dataItem[2])];
+    			});
+
+    			option = {
+        			// backgroundColor: '#000',
+        			globe: {
+            			baseTexture: null,
+            			heightTexture: null,
+            			// shading: 'lambert',
+            			environment: null,
+            			// light: {
+                		// 	main: {
+                    	// 		intensity: 2
+                		// 	}
+            			// },
+            			viewControl: {
+                			autoRotate: true
+            			}
+        			},
+        			visualMap: {
+            			max: 40,
+            			calculable: true,
+            			realtime: false,
+            			inRange: {
+                			colorLightness: [0.2, 0.9]
+            			},
+            			textStyle: {
+                			color: '#fff'
+            			},
+            			controller: {
+                			inRange: {
+                    			color: 'darkred'
+                			}
+            			},
+            			outOfRange: {
+                			colorAlpha: 0
+            			}
+        			},
+        			series: [{
+            			type: 'bar3D',
+            			coordinateSystem: 'globe',
+            			data: data,
+            			barSize: 0.6,
+            			minHeight: 0.2,
+            			silent: true,
+            			itemStyle: {
+               				color: 'darkred'
+            			}
+        			}]
+    			};
+
+    			myChart.setOption(option);
+			})
+
+			option && myChart.setOption(option);
+
 		</script>
 	</body>
 </html>
