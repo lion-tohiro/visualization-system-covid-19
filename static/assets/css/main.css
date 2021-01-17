@@ -3822,6 +3822,51 @@ input, select, textarea {
 					}
 
 			}
+		
+			#main > .post2 {
+				padding: 2rem 2rem 2rem 2rem ;
+			}
+	
+				#main > .post2 header.major > .date {
+					margin-top: -2rem;
+				}
+	
+				#main > .post2 header.major > h1, #main > .post2 header.major h2 {
+					font-size: 4rem;
+					line-height: 1.1;
+					margin: 0 0 2rem 0;
+				}
+	
+				#main > .post2.featured {
+					text-align: center;
+				}
+	
+				@media screen and (max-width: 1280px) {
+	
+					#main > .post2 {
+						padding: 6rem 4rem 4rem 4rem ;
+					}
+	
+				}
+	
+				@media screen and (max-width: 736px) {
+	
+					#main > .post2 {
+						padding: 4rem 2rem 2rem 2rem ;
+					}
+	
+						#main > .post2 header.major > .date {
+							margin-top: -1rem;
+							margin-bottom: 2rem;
+						}
+	
+						#main > .post2 header.major > h1, #main > .post2 header.major h2 {
+							font-size: 2.5rem;
+							line-height: 1.2;
+							margin: 0 0 1.5rem 0;
+						}
+	
+				}
 
 		#main > .posts {
 			display: -moz-flex;
