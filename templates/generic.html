@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -39,72 +40,41 @@
 
 				<!-- Main -->
 					<div id="main">
-
 						<!-- Post -->
-							<section class="post">
+							<section class="post2">
 								<header class="major">
-									<span class="date">April 25, 2017</span>
-									<h1>This is a<br />
-									Generic Page</h1>
-									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-									amet nullam sed etiam veroeros.</p>
+									
+									<h1>新冠国内疫情</h1>
+							
 								</header>
-								<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sapien risus, commodo eget turpis at, elementum convallis enim turpis, lorem ipsum dolor sit amet nullam.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus. Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum.</p>
+								<style>
+									.mapcontainer {
+										/* width: 900px; */
+										height: 800px;
+									}
+
+									/* #chinamap{
+										width: 70%;
+									} */
+								</style>
+								<div class="mapcontainer" id="chinamap"></div>
+								<div><h1>&nbsp;</h1></div>
+							
+								<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;疫情前期，热词以“疫情”、“武汉”、“加油”、“医护人员”为主，对应于主要的抗疫进程。<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;从4月开始，从疫情图可以看出疫情开始好转，热点词汇中正面乐观词汇开始占上风，
+									例如“复工”、“清零”等正向词开始上热点。<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;同时以“特朗普”、“美国”、“Fake New”为主的热点显示社会热点目光开始向国外转移。</p>
+								<!-- <div><h1>&nbsp;</h1></div> -->
+							</section>
+							<section class="post">
+								<div><p> </p></div>
+								<div id="test" style="width: 600px;height:400px;"></div>
+								<p> </p>
+								<p>国内疫情在2月份集中爆发，这也和上面地图呈现的情况相符。<br>三月及以后，疫情逐渐被控制住，虽然在后期疫情新增人数有小面积的反扑，但是总体上已经被控制住。</p>
 							</section>
 
 					</div>
 
 				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+			
 
 				<!-- Copyright -->
 					<div id="copyright">
@@ -114,6 +84,7 @@
 			</div>
 
 		<!-- Scripts -->
+			<script src="assets/js/echarts.min.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -121,6 +92,31 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/page2.js"></script>
+			<script src="assets/js/china.js"></script>
+			<script src="assets/js/hotpoint.js"></script>
+			<script src="assets/js/chinamap.js"></script>
+			<!-- <script src="assets/js/echarts-wordcloud.js"></script>
+			<script src="assets/js/echarts-wordcloud.min.js"></script> -->
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/dist/echarts.min.js"></script>
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@1/dist/echarts-gl.min.js"></script>
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat@1/dist/ecStat.min.js"></script>
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/dist/extension/dataTool.min.js"></script>
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/map/js/china.js"></script>
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/map/js/world.js"></script>
+			<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=BeVt7fjIOFdT3pQO6LcLI7ig1dU8kq6R"></script>
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/dist/extension/bmap.min.js"></script>
+			<script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+			<!-- <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script> -->
+			<!--script src="echarts.js"></script-->
+			<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+			<script src="https://gallery.echartsjs.com/dep/echarts/map/js/china.js"></script>
+			<script src="assets/js/wordcloud2.js"></script>
+			<script src="https://www.echartsjs.com/examples/vendors/echarts/echarts.min.js?_v_=1578305236132"></script>
+  <!--引入中国的地图数据js文件，引入后会自动注册地图名字和数据-->
+  			<script src="https://www.echartsjs.com/examples/vendors/echarts/map/js/china.js?_v_=1578305236132"></script>
+			
+			  
 
 	</body>
 </html>
